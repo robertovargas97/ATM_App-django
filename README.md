@@ -14,10 +14,11 @@ This is a simple app that represents the functionality of an ATM.
     that the client has the funds available.
 
     ➔ Once the transaction is done, it should show the user a message like: "Your money is 2 bill(s) 
-    of ₡2000, 1 bill(s) of ₡5000 and 2 bill(s) of ₡10,000" You can use plurals to indicate unit values, 
-    for example 1 bills of ₡10,000.
+    of ₡2000, 1 bill(s) of ₡5000 and 2 bill(s) of ₡10,000" You can use plurals to indicate unit 
+    values,for example 1 bills of ₡10,000.
 
-    ➔ Once the transaction has finished, the system should return to the desired quantity request screen.
+    ➔ Once the transaction has finished, the system should return to the desired quantity request 
+    screen.
 
     ➔ You should keep a log of each executed transaction.
 
