@@ -1,4 +1,4 @@
-# Cashier_App-django
+# ATM_App-django
 
 This is a simple app that represents the functionality of an ATM.
 
