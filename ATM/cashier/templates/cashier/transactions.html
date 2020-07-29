@@ -1,0 +1,45 @@
+{% extends "cashier/base.html" %}
+
+{% block content %}
+
+
+
+<div class="jumbotron myBg">
+    <h1 class="display-4">Bitácora de transacciones ( Cajero <i class="fas
+            fa-money-bill-wave text-success"></i> )</h1>
+    <hr>
+</div>
+{% if transactions_list|length > 0 %}
+<table class="table mt-4 text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Fecha de transacción</th>
+            <th scope="col">Monto de transacción</th>
+            <th scope="col">Resultado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transaction in transactions_list %}
+        <tr>
+            <th scope="row">{{transaction.id}}</th>
+            <td class="">{{transaction.transaction_date|date:'m/d/Y'}}</td>
+            <td class="">₡ {{transaction.amount}}</td>
+            {% if transaction.result == "Transacción válida" %}
+            <td class="text-success"> {{transaction.result}}</td>
+            {% else %}
+            <td class="text-danger">{{transaction.result}}</td>
+            {% endif %}
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+<div class="alert alert-info" role="alert">
+    No hay transacciones registradas
+</div>
+{% endif %}
+
+{% endblock %}

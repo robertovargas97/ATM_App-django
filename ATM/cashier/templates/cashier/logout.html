@@ -1,0 +1,17 @@
+{% extends "cashier/base.html" %}
+
+{% block content %}
+
+
+
+<div class="jumbotron myBg">
+    <h1 class="display-4">Has cerrado sesión</h1>
+    <!-- Action result to redirect -->
+    <hr>
+
+    <div class="form-group">
+        <a class="btn btn-info" href="{% url 'cashier-home' %}">Volver al inicio</a>
+    </div>
+</div>
+
+{% endblock %}

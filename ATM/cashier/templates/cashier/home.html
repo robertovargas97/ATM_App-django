@@ -1,0 +1,29 @@
+{% extends "cashier/base.html" %}
+
+{% block content %}
+
+<div class="jumbotron myBg">
+    <h1 class="display-4">Cajero <i class="fas fa-money-bill-wave text-success"></i> )</h1>
+    <!-- Action result to redirect -->
+    <hr>
+    <form method="POST" action="result" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="money">Ingrese la cantidad de dinero (al menos 4 digítos)</label>
+            <input type="number" class="form-control" id="money" name="money" aria-describedby="emailHelp">
+            <small id="error" class="text-danger animated fadeIn fast mt-1">Monto inválido</small>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info" id="actionBtn">Obtener
+                dinero</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
+
+<div id="msj" class="alert alert-info mt-3 mb-3" role="alert">
+    <p class="">{{msj}}</p>
+</div>
